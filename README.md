@@ -39,8 +39,7 @@ A modular Python chatbot with document retrieval, memory, and user context manag
 - `memory_db.py`: memory and document database management
 - `chatbot.py`: conversational logic
 - `utils.py`: utility functions
-- `core/`, `src/`: specialized modules
-- `.env.example`: config template (never put your real key on GitHub)
+
 
 
 
