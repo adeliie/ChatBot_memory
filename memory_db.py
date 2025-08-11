@@ -27,7 +27,7 @@ def query_db(state, user_id: str, query: str):
         all_docs = [Document(page_content=doc, metadata=meta or {}) for doc, meta in zip(docs["documents"], docs["metadatas"])]
         
         recent_messages = state["messages"][-6:]
-        conv_profile = "\n".join(m.content for m in recent_messages if isinstance(m, HumanMessage))
+        conv_profile = "\n".join(m.content for m in recent_messages if isinstance(m, HumanMessage) and "load_document" not in m.content and "set_context" not in m.content)
         
         conv_embedding = embedding_function.embed_query(conv_profile)
     
