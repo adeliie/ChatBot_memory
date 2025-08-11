@@ -1,0 +1,9 @@
+langchain-core
+langchain-community
+langchain-chroma
+langchain-huggingface
+sentence-transformers
+torch
+scikit-learn
+python-dotenv
+mem0ai
