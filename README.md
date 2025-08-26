@@ -1,32 +1,22 @@
-# 🤖 ChatBot Memory
+# ChatBot Memory
 
 An intelligent conversational AI system with persistent memory, document understanding, and personalized context management. Built with LangChain, ChromaDB, and advanced retrieval techniques.
 
-## ✨ Features
+## Features
 
-### 🧠 **Persistent Memory System**
+### **Persistent Memory System**
 - **Long-term Memory**: Remembers conversations across sessions using Mem0
 - **User Context**: Customizable user profiles and preferences
 - **Conversation History**: Maintains context throughout interactions
 
-### 📚 **Document Intelligence**
+### **Document Intelligence**
 - **PDF Processing**: Load and analyze PDF documents
 - **Smart Retrieval**: Hybrid search combining BM25 and semantic similarity
 - **Document Classification**: Automatically categorizes uploaded content
 - **Contextual Relevance**: Finds information relevant to current conversation
 
-### 🎯 **Advanced Retrieval**
-- **Multi-Modal Search**: Combines keyword and semantic search
-- **Relevance Scoring**: Sophisticated scoring system for document ranking
-- **Context Awareness**: Considers user context and conversation history
-- **Threshold Filtering**: Only retrieves genuinely relevant information
 
-### 🔧 **Modular Architecture**
-- **State Management**: Built with LangGraph for complex conversation flows
-- **Configurable**: Easy API key and model configuration
-- **Extensible**: Clean separation of concerns for easy feature addition
-
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.8+
@@ -80,12 +70,6 @@ AI: 📄 Document '/path/to/your/document.pdf' loaded successfully.
 ```
 You: set_context I'm a software developer interested in Python and AI
 AI: ✅ Your user context has been updated.
-```
-
-### Intelligent Retrieval
-```
-You: What did the document say about machine learning?
-AI: Based on your uploaded document, machine learning is described as...
 ```
 
 ## 🏗️ Architecture
