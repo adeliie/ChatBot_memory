@@ -101,30 +101,6 @@ AI: ✅ Your user context has been updated.
 - **API Management**: Handles external service connections
 - **Device Optimization**: Automatic GPU/CPU selection
 
-### Data Flow
-
-```mermaid
-graph TD
-    A[User Input] --> B{Input Type?}
-    B -->|Document| C[Document Loader]
-    B -->|Context| D[Context Manager]
-    B -->|Question| E[Chatbot Engine]
-    
-    C --> F[ChromaDB Storage]
-    D --> G[User Context Storage]
-    E --> H[Memory Retrieval]
-    E --> I[Document Retrieval]
-    
-    H --> J[Mem0 API]
-    I --> F
-    
-    H --> K[Response Generation]
-    I --> K
-    G --> K
-    
-    K --> L[AI Response]
-    L --> M[Memory Update]
-```
 
 ## 🔧 Configuration
 
@@ -159,67 +135,7 @@ ChatBot_memory/
 └── user_contexts/      # User context files (created automatically)
 ```
 
-## 🎛️ Advanced Features
 
-### Smart Document Retrieval
-- **Contextual Filtering**: Only searches documents relevant to the conversation
-- **Multi-Score Ranking**: Combines semantic, keyword, and context scores
-- **Adaptive Thresholds**: Dynamic relevance filtering
-
-### Memory Management
-- **Selective Memory**: Stores relevant conversation parts
-- **User Profiling**: Builds user preference profiles over time
-- **Context Persistence**: Maintains user settings across sessions
-
-### Conversation Intelligence
-- **Intent Recognition**: Understands different types of user inputs
-- **Context Integration**: Seamlessly weaves together multiple information sources
-- **Response Optimization**: Provides concise, relevant answers
-
-## 🛠️ Development
-
-### Adding New Features
-1. **New Node Types**: Add to `graph_setup.py`
-2. **Custom Retrievers**: Extend `memory_db.py`
-3. **Document Types**: Enhance `document.py`
-
-### Testing
-```bash
-# Test with sample documents
-python main.py
-# Enter user ID: test_user
-# Try: load document sample.pdf
-# Try: What does the document discuss?
-```
-
-## 🔮 Future Enhancements
-
-- [ ] **Multi-format Support**: Word, Excel, PowerPoint documents
-- [ ] **Web Scraping**: URL content integration
-- [ ] **Voice Interface**: Speech-to-text and text-to-speech
-- [ ] **Multi-user Management**: Team collaboration features
-- [ ] **API Endpoints**: REST API for integration
-- [ ] **GUI Interface**: Web-based user interface
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **LangChain** for the conversational AI framework
-- **ChromaDB** for vector storage capabilities
-- **Mem0** for persistent memory management
-- **HuggingFace** for embedding models
-- **Ollama** for local LLM hosting
 
 ---
 
