@@ -10,3 +10,5 @@ mem0ai
 numpy
 langgraph
 typing-extensions
+torch torchvision torchaudio
+transformers==4.33.0 accelerate datasets evaluate wandb scikit-learn scipy sentencepiece
