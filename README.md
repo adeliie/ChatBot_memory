@@ -135,8 +135,3 @@ ChatBot_memory/
 └── user_contexts/      # User context files (created automatically)
 ```
 
-
-
----
-
-**Built with ❤️ for intelligent conversations**
